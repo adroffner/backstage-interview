@@ -1,0 +1,55 @@
+Problem Statement:
+
+Please design and develop a service that I can query that will yield the difference between:
+ 
+1) the sum of the squares of the first n natural numbers and...
+2)  the square of the sum of the same first n natural numbers, where n is guaranteed to be no greater than 100.
+
+Example:
+
+The sum of the squares of the first ten natural numbers is:
+
+1^2 + 2^2 + ... + 10^2 = 385
+
+The square of the sum of the first ten natural numbers is:
+
+(1 + 2 + ... + 10)^2 = 552 = 3025
+
+Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+
+Requirements:
+
+You should use Python and Django (any version of your choice).
+
+I should be able to install your service by doing: pip install -r requirements.txt from a virtual environment.
+
+I should be able to query your service at the following endpoint:
+
+localhost:8000/difference?number=n where n is any integer greater than 0 and less than or equal to 100.
+
+Your service should emit a JSON object of the following structure:
+
+{
+"datetime":current_datetime,
+"value":solution,
+"number":n,
+"occurrences":occurrences // the number of times n has been requested
+}
+
+For persistence you can use postgres, mysql, mongo, neo4j, memcached, or redis.
+
+Bonus (as discussed - highly encouraged):
+
+Create a backbone application (or any other front end framework or just jquery) based on the above backend service.
+That should display a list of the above values in the four columns described above (tabular data from JSON list?).
+
+Your app should have a form to enter the number that you wish to query.
+Be as creative as you want if you decide to take on the bonus section.
+
+Delivery:
+
+Please commit your code using either git or mercurial and use either bitbucket or github.
+If you run into any issues, please contact me directly.
+
+You have until 9PM on Wednesday to complete this task
+
